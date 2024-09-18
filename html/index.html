@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan EMI Calculator</title>
+    <link href="../css/calculator.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="loan-calculator">
+        <div class="top">
+            <h2>Loan Calculator</h2>
+
+            <form action="#">
+                <div class="group">
+                    <div class="title">Amount</div>
+                    <div class="display-value">
+                        <input type="text" class="value-display loan-amount-value" value="50000" />
+                    </div>
+                    <input type="range" min="50000" max="5000000" step="10000" value="50000" class="loan-amount" />
+
+                    <div class="range-values">
+                        <span class="min-value">50000</span>
+                        <!-- <span class="value-display loan-amount-value">50000</span> -->
+                        <span class="max-value">5000000</span>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <div class="title">Interest Rate (%)</div>
+                    <div class="display-value">
+                        <input type="text" class="value-display interest-rate-value" value="7.5" />
+                    </div>
+                    <input type="range" min="7.5" max="20" step="0.1" value="7.5" class="interest-rate" />
+
+                    <div class="range-values">
+                        <span class="min-value">1</span>
+                        <!-- <span class="value-display interest-rate-value">8.5</span> -->
+                        <span class="max-value">20</span>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <div class="title">Tenure (in months)</div>
+                    <div class="display-value">
+                        <input type="text" class="value-display loan-tenure-value" value="12" />
+                    </div>
+                    <input type="range" min="12" max="360" step="1" value="12" class="loan-tenure" />
+
+                    <div class="range-values">
+                        <span class="min-value">12</span>
+                        <!-- <span class="value-display loan-tenure-value">12</span> -->
+                        <span class="max-value">360</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="result">
+            <div class="left">
+                <div class="loan-emi">
+                    <h3>Loan EMI</h3>
+                    <div class="value">123</div>
+                </div>
+
+                <div class="total-interest">
+                    <h3>Total Interest Payable</h3>
+                    <div class="value">1234</div>
+                </div>
+
+                <div class="total-amount">
+                    <h3>Total Amount</h3>
+                    <div class="value">12345</div>
+                </div>
+
+                <button type="button" class="calculate-btn">Calculate</button>
+            </div>
+
+            <div class="right">
+                <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- js file path -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+    <script src="../js/calculator.js"></script>
+</body>
+
+</html>
